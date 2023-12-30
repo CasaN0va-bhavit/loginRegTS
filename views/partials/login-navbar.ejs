@@ -1,0 +1,93 @@
+<script defer src="https://kit.fontawesome.com/0f20a2b955.js" crossorigin="anonymous"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    * {
+        font-family: Outfit;
+        color: #16e16e;
+    }
+    body {
+        background: #000;
+        display: flex;
+        flex-direction: column;
+    }
+    ::-webkit-scrollbar {
+        /* display: none; */
+        width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #16e16e;
+    }
+    nav {
+        align-self: center;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 90%;
+        justify-content: space-between;
+    }
+    .logo {
+        font-size: 2vw;
+    }
+    .links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 25%;
+    }
+    .link {
+        color: white;
+        text-decoration: none;
+        transition: all 0.5s ease;
+    }
+    .link:hover {
+        color: #16e16e;
+    }
+    .section {
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .error {
+        position: absolute;
+        width: auto;
+        padding: 1vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: #16e16e;
+        color: white;
+        bottom: -10vw;
+        gap: 0.5vw;
+        right: 2vw;
+        border-radius: 2.5px;
+        animation: up 0.5s ease 0s 1 forwards;
+    }
+    @keyframes up {
+            0% {
+                bottom: -10vw;
+            }
+            100% {
+                bottom: 2vw;
+            }
+        }
+    i {
+        color: #fff;
+    }
+</style>
+<nav>
+    <h1 class="logo">Spotify</h1>
+    <div class="links">
+        <a href="/login" class="link">Login</a>
+        <a href="/register" class="link">Register</a>
+        <a href="/" class="link">Index</a>
+    </div>
+</nav>

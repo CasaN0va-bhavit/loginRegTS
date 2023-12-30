@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body  {
+            overflow: hidden;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2vh;
+        }
+        button {
+            padding: 10px;
+            background: transparent;
+            border: 2px #fff solid;
+            border-color: #fff;
+            border-radius: 5px;
+            color: #fff;
+            transition: all 0.5s ease;
+        }
+        input {
+            padding: 10px;
+            outline: none;
+            border: 2px #fff solid;
+            border-radius: 5px;
+            background: transparent;
+            width: 20vw;
+            font-size: 1.2vw;
+            color: white;
+            transition: all 0.5s ease;
+        }
+        input:focus  {
+            border: 2px #16e16e solid;
+        }
+        button:hover {
+            color: #16e16e;
+            border-color: #16e16e;
+        }
+    </style>
+</head>
+<body>
+    <%- include("./partials/login-navbar") %>
+    <div class="section">
+        <h1>Register</h1>
+        <form action="/register" method="POST">
+            <input type="email" placeholder="Email" name="email">
+            <input type="text" placeholder="First Name" name="fname">
+            <input type="text" placeholder="Last Name" name="lname">
+            <input type="password" placeholder="Password" name="password">
+            <input type="password" placeholder="Confirm Password" name="cpassword">
+            <button>Submit</button>
+            <% if (error) { %>
+                <div class="error">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <%= error %>
+                </div>
+            <% } %> 
+        </form>
+    </div>
+</body>
+<script>
+    const success = document.getElementById("success").innerText
+    if (success.length < 5) {
+        setInterval(() => {
+            window.location.href = '/login'
+        }, 3000)
+    }
+</script>
+</html>
