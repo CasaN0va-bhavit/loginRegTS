@@ -1,2 +1,2 @@
 # loginRegTS
-This is a login and register built on express using typescript.
+This is a login and register built on nodejs using typescript.
